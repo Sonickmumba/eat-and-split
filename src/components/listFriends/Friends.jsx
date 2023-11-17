@@ -30,7 +30,6 @@ const Friends = () => {
           {item.balance < 0 && (<p className='red'>You owe {item.name} €{Math.abs(item.balance)}</p>)}
           {item.balance > 0 && (<p className='green'>{item.name} owes you €{Math.abs(item.balance)}</p>)}
           {item.balance === 0 && (<p>You and {item.name} are even</p>)}
-          {/* <p className={item.balance < 0 ? "red" : item.balance > 0 ? "green" : ""}>You owe {item.name} (X)</p> */}
           <button className='button'>Select</button>
         </li>
       ))}
