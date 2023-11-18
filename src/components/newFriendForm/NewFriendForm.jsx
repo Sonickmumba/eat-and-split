@@ -1,15 +1,15 @@
 import React from "react";
 
-const NewFriendForm = () => {
+const NewFriendForm = ({addFriend, addFriendName, addFriendImage, friendName, friendImage}) => {
   return (
-    <form className="form-add-friend">
+    <form className="form-add-friend" onSubmit={addFriend}>
       <label>👫 Friend Name</label>
-      <input type="text" />
+      <input type="text" value={friendName} onChange={addFriendName} required/>
 
       <label>🌄 Image URL</label>
-      <input type="text" />
+      <input type="text" value={friendImage} onChange={addFriendImage} required/>
 
-      <button className="button">Add</button>
+      <button className="button" type="submit">Add</button>
     </form>
   );
 };

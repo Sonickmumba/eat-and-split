@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import './App.css'
-import ListFriends from './components/listFriends/ListFriends';
-import BillForm from './components/billForm/BillForm';
+import "./App.css";
+import ListFriends from "./components/listFriends/ListFriends";
+import BillForm from "./components/billForm/BillForm";
 
 const initialFriends = [
   {
@@ -23,23 +23,54 @@ const initialFriends = [
     image: "https://i.pravatar.cc/48?u=499476",
     balance: 0,
   },
-]; 
+];
 
 function App() {
-  const [name, setName] = useState('')
-  const toUseData = initialFriends;
+  const [name, setName] = useState("");
+  const [dataUse, setDataUse] = useState(initialFriends);
+  const [friendName, setFriendName] = useState('');
+  const [friendImage, setFriendImage] = useState('');
+
   const handleSelect = (e) => {
     setName(e.target.id);
-  }
+  };
+
+  const addFriendName = (e) => {
+    setFriendName(e.target.value);
+  };
+ 
+  const addFriendImage = (e) => {
+    setFriendImage(e.target.value);
+  };
+
+  const addFriend = (e) => {
+    e.preventDefault();
+    setDataUse((prev) => [...prev, {
+      id: crypto.randomUUID,
+      name: friendName,
+      image: friendImage,
+      balance: 0,
+    }])
+    setFriendName('');
+    setFriendImage('');
+  };
 
   return (
     <>
-      <div className='app'>
-        <ListFriends data={toUseData} handleSelect={handleSelect}/>
-        {name !== "" && <BillForm name={name}/>}
+      <div className="app">
+        <ListFriends
+          data={dataUse}
+          handleSelect={handleSelect}
+          addFriendName={addFriendName}
+          addFriendImage={addFriendImage}
+          addFriend={addFriend}
+          friendName={friendName}
+          friendImage={friendImage}
+        />
+        {name !== "" && <BillForm name={name} />}
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

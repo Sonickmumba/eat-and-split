@@ -1,18 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const BillForm = ({name}) => {
+const BillForm = ({ name }) => {
   if (!name) "";
   return (
-    <form className='form-split-bill'>
+    <form className="form-split-bill">
       <h2>Split a bill with {name} </h2>
       <label>💰 Bill value</label>
       <input type="text" />
-      
+
       <label>🧍🏻‍♀️ Your expense</label>
       <input type="text" />
 
       <label>👫 (X)'s expense</label>
-      <input type="text" disabled/>
+      <input type="text" disabled />
 
       <label>🤑 Who is paying</label>
       <select name="" id="">
@@ -22,7 +22,7 @@ const BillForm = ({name}) => {
 
       <button className="button">Split bill</button>
     </form>
-  )
-}
+  );
+};
 
-export default BillForm
+export default BillForm;
