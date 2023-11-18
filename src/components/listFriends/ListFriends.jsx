@@ -5,7 +5,7 @@ import NewFriendForm from '../newFriendForm/NewFriendForm';
 
 const ListFriends = ({data, handleSelect}) => {
   const [clicked, setClicked] = useState(false);
-  
+
   const handleAddFriend = (e) => {
     e.preventDefault();
     setClicked((clicked) => !clicked);
@@ -14,7 +14,7 @@ const ListFriends = ({data, handleSelect}) => {
     <div className='sidebar'>
       <Friends data={data} handleSelect={handleSelect}/>
       {clicked && <NewFriendForm />}
-      <button className='button' onClick={handleAddFriend}>Add friend</button>
+      <button className='button' onClick={handleAddFriend}>{clicked ? "close" : "Add friend"}</button>
     </div>
   )
 }
