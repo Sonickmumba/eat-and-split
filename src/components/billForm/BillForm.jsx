@@ -1,9 +1,10 @@
 import React from 'react'
 
-const BillForm = () => {
+const BillForm = ({name}) => {
+  if (!name) "";
   return (
     <form className='form-split-bill'>
-      <h2>Split a bill with (name) </h2>
+      <h2>Split a bill with {name} </h2>
       <label>💰 Bill value</label>
       <input type="text" />
       
