@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Friends from './Friends';
 import NewFriendForm from '../newFriendForm/NewFriendForm';
 
 
 const ListFriends = ({data, handleSelect}) => {
+  const [clicked, setClicked] = useState(false);
+  
+  const handleAddFriend = (e) => {
+    e.preventDefault();
+    setClicked((clicked) => !clicked);
+  }
   return (
     <div className='sidebar'>
       <Friends data={data} handleSelect={handleSelect}/>
-      <NewFriendForm />
-      <button className='button'>Add friend</button>
+      {clicked && <NewFriendForm />}
+      <button className='button' onClick={handleAddFriend}>Add friend</button>
     </div>
   )
 }
