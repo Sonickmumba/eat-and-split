@@ -29,7 +29,7 @@ function App() {
   const [name, setName] = useState("");
   const [dataUse, setDataUse] = useState(initialFriends);
   const [friendName, setFriendName] = useState('');
-  const [friendImage, setFriendImage] = useState('');
+  const [friendImage, setFriendImage] = useState('https://i.pravatar.cc/48');
 
   const handleSelect = (e) => {
     setName(e.target.id);
@@ -45,14 +45,15 @@ function App() {
 
   const addFriend = (e) => {
     e.preventDefault();
+    const id = Date.now();
     setDataUse((prev) => [...prev, {
-      id: crypto.randomUUID,
+      id: id,
       name: friendName,
-      image: friendImage,
+      image: `${friendImage}?=${id}`,
       balance: 0,
     }])
     setFriendName('');
-    setFriendImage('');
+    // setFriendImage('');
   };
 
   return (
