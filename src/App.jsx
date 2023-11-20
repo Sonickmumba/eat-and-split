@@ -28,8 +28,8 @@ const initialFriends = [
 function App() {
   const [name, setName] = useState("");
   const [dataUse, setDataUse] = useState(initialFriends);
-  const [friendName, setFriendName] = useState('');
-  const [friendImage, setFriendImage] = useState('https://i.pravatar.cc/48');
+  const [friendName, setFriendName] = useState("");
+  const [friendImage, setFriendImage] = useState("https://i.pravatar.cc/48");
 
   const handleSelect = (e) => {
     setName(e.target.id);
@@ -38,7 +38,7 @@ function App() {
   const addFriendName = (e) => {
     setFriendName(e.target.value);
   };
- 
+
   const addFriendImage = (e) => {
     setFriendImage(e.target.value);
   };
@@ -46,14 +46,41 @@ function App() {
   const addFriend = (e) => {
     e.preventDefault();
     const id = Date.now();
-    setDataUse((prev) => [...prev, {
-      id: id,
-      name: friendName,
-      image: `${friendImage}?=${id}`,
-      balance: 0,
-    }])
-    setFriendName('');
-    // setFriendImage('');
+    setDataUse((prev) => [
+      ...prev,
+      {
+        id: id,
+        name: friendName,
+        image: `${friendImage}?=${id}`,
+        balance: 0,
+      },
+    ]);
+    setFriendName("");
+    setFriendImage("https://i.pravatar.cc/48");
+  };
+
+  // Bill form now
+  const [bill, setBill] = useState('');
+  const [myExpense, setMyExpense] = useState('');
+  const [toPay, setToPay] = useState("user");
+
+  // const friendExpense = bill ? Number(bill) - Number(myExpense) : "";
+
+  const splitBill = (e) => {
+    e.preventDefault();
+    console.log("son");
+  };
+
+  const whoToPay = (e) => {
+    setToPay(e.target.value);
+  };
+
+  const totalBill = (e) => {
+    setBill(e.target.value);
+  };
+
+  const ownBill = (e) => {
+    setMyExpense(e.target.value);
   };
 
   return (
@@ -68,7 +95,19 @@ function App() {
           friendName={friendName}
           friendImage={friendImage}
         />
-        {name !== "" && <BillForm name={name} />}
+        {name !== "" && (
+          <BillForm
+            name={name}
+            splitBill={splitBill}
+            whoToPay={whoToPay}
+            toPay={toPay}
+            ownBill={ownBill}
+            totalBill={totalBill}
+            bill={bill}
+            myExpense={myExpense}
+            // friendExpense={friendExpense}
+          />
+        )}
       </div>
     </>
   );
