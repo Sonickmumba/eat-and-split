@@ -34,9 +34,6 @@ function App() {
   const handleSelection = (friend) => {
     setSelectedFriend((selected) => (selected && selected.id === friend.id ? null : friend));
   };
-  
-
-  console.log(selectedFriend);
 
   const addFriendName = (e) => {
     setFriendName(e.target.value);
@@ -107,7 +104,6 @@ function App() {
             totalBill={totalBill}
             bill={bill}
             myExpense={myExpense}
-            // friendExpense={friendExpense}
           />
         )}
       </div>

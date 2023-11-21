@@ -10,9 +10,8 @@ const BillForm = ({
   ownBill,
   bill,
   myExpense,
-  // friendExpense,
 }) => {
-  // if (!name) "";
+
   return (
     <form className="form-split-bill" onSubmit={splitBill}>
       <h2>Split a bill with {selectedFriend.name} </h2>

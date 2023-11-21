@@ -27,7 +27,6 @@ const ListFriends = ({
           <Friends item={item} handleSelection={handleSelection} selectedFriend={selectedFriend} key={item.id}/>
         ))}
       </>
-      {/* <Friends data={data} handleSelection={handleSelection} selectedFriend={selectedFriend}/> */}
       {clicked && (
         <NewFriendForm
           addFriend={addFriend}
