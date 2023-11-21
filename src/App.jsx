@@ -66,9 +66,15 @@ function App() {
   const [myExpense, setMyExpense] = useState("");
   const [toPay, setToPay] = useState("user");
 
-  const splitBill = (e) => {
-    e.preventDefault();
-    console.log("son");
+  const handleSplitBill = (value) => {
+    setDataUse((prev) =>
+      prev.map((friend) =>
+        friend.id === selectedFriend.id
+          ? { ...friend, balance: friend.balance + value }
+          : friend
+      )
+    );
+    setSelectedFriend(null);
   };
 
   const whoToPay = (e) => {
@@ -99,7 +105,7 @@ function App() {
         {selectedFriend && (
           <BillForm
             selectedFriend={selectedFriend}
-            splitBill={splitBill}
+            handleSplitBill={handleSplitBill}
             whoToPay={whoToPay}
             toPay={toPay}
             ownBill={ownBill}

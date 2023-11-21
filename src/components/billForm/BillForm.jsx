@@ -3,7 +3,7 @@
 
 const BillForm = ({
   selectedFriend,
-  splitBill,
+  handleSplitBill,
   whoToPay,
   toPay,
   totalBill,
@@ -11,6 +11,13 @@ const BillForm = ({
   bill,
   myExpense,
 }) => {
+  const paidByFriend = Number(myExpense) > Number(bill) ? 0 : Number(bill) - Number(myExpense);
+
+  const splitBill = (e) => {
+    e.preventDefault();
+    if (!bill || !myExpense) return;
+    handleSplitBill(toPay === "user" ? paidByFriend : -myExpense)
+  }
 
   return (
     <form className="form-split-bill" onSubmit={splitBill}>
@@ -22,7 +29,7 @@ const BillForm = ({
       <input type="text" value={Number(myExpense) > Number(bill) ? bill : myExpense} onChange={ownBill} />
 
       <label>👫 {selectedFriend.name}&apos;s expense</label>
-      <input type="text" value={Number(myExpense) > Number(bill) ? 0 : Number(bill) - Number(myExpense)} disabled />
+      <input type="text" value={paidByFriend} disabled />
 
       <label>🤑 Who is paying</label>
       <select name="" id="" value={toPay} onChange={whoToPay}>
