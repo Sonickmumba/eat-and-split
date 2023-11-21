@@ -26,14 +26,17 @@ const initialFriends = [
 ];
 
 function App() {
-  const [name, setName] = useState("");
+  const [selectedFriend, setSelectedFriend] = useState(null);
   const [dataUse, setDataUse] = useState(initialFriends);
   const [friendName, setFriendName] = useState("");
   const [friendImage, setFriendImage] = useState("https://i.pravatar.cc/48");
 
-  const handleSelect = (e) => {
-    setName(e.target.id);
+  const handleSelection = (friend) => {
+    setSelectedFriend((selected) => (selected && selected.id === friend.id ? null : friend));
   };
+  
+
+  console.log(selectedFriend);
 
   const addFriendName = (e) => {
     setFriendName(e.target.value);
@@ -64,8 +67,6 @@ function App() {
   const [myExpense, setMyExpense] = useState('');
   const [toPay, setToPay] = useState("user");
 
-  // const friendExpense = bill ? Number(bill) - Number(myExpense) : "";
-
   const splitBill = (e) => {
     e.preventDefault();
     console.log("son");
@@ -88,16 +89,17 @@ function App() {
       <div className="app">
         <ListFriends
           data={dataUse}
-          handleSelect={handleSelect}
+          handleSelection={handleSelection}
           addFriendName={addFriendName}
           addFriendImage={addFriendImage}
           addFriend={addFriend}
           friendName={friendName}
           friendImage={friendImage}
+          selectedFriend={selectedFriend}
         />
-        {name !== "" && (
+        {selectedFriend && (
           <BillForm
-            name={name}
+            selectedFriend={selectedFriend}
             splitBill={splitBill}
             whoToPay={whoToPay}
             toPay={toPay}

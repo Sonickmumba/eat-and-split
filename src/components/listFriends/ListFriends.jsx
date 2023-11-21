@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import Friends from "./Friends";
 import NewFriendForm from "../newFriendForm/NewFriendForm";
 
 const ListFriends = ({
   data,
-  handleSelect,
+  handleSelection,
   addFriend,
   addFriendName,
   addFriendImage,
   friendName,
   friendImage,
+  selectedFriend,
 }) => {
   const [clicked, setClicked] = useState(false);
 
@@ -20,7 +22,12 @@ const ListFriends = ({
 
   return (
     <div className="sidebar">
-      <Friends data={data} handleSelect={handleSelect} />
+      <>
+        {data.map((item) => (
+          <Friends item={item} handleSelection={handleSelection} selectedFriend={selectedFriend} key={item.id}/>
+        ))}
+      </>
+      {/* <Friends data={data} handleSelection={handleSelection} selectedFriend={selectedFriend}/> */}
       {clicked && (
         <NewFriendForm
           addFriend={addFriend}
