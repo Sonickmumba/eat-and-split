@@ -32,7 +32,9 @@ function App() {
   const [friendImage, setFriendImage] = useState("https://i.pravatar.cc/48");
 
   const handleSelection = (friend) => {
-    setSelectedFriend((selected) => (selected && selected.id === friend.id ? null : friend));
+    setSelectedFriend((selected) =>
+      selected?.id === friend.id ? null : friend
+    );
   };
 
   const addFriendName = (e) => {
@@ -60,8 +62,8 @@ function App() {
   };
 
   // Bill form now
-  const [bill, setBill] = useState('');
-  const [myExpense, setMyExpense] = useState('');
+  const [bill, setBill] = useState("");
+  const [myExpense, setMyExpense] = useState("");
   const [toPay, setToPay] = useState("user");
 
   const splitBill = (e) => {
