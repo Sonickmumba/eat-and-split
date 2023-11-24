@@ -1,9 +1,6 @@
 /* eslint-disable react/prop-types */
-// import React from 'react'
-// import { useState } from 'react';
 
 const Friends = ({ item, handleSelection, selectedFriend }) => {
-  // const isSelected = selectedFriend && item.id === selectedFriend.id;
   const isSelected = item.id === selectedFriend?.id;
 
   return (
