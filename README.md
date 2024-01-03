@@ -26,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Travel-list <a name="about-project"></a>
+# 📖 Eat and split <a name="about-project"></a>
 
-**Budget_app** is a mobile web application where one can manage their budget: have a list of transactions associated with a category, so that one can see how much money you spent and on what.
+**Eat-and-split** is a mobile web application where one can manage their budget: have a list of transactions associated with a category, so that one can see how much money you spent and on what.
 It is built using Ruby on Rails.
 
 # ERD Diagram
@@ -83,7 +83,7 @@ It is built using Ruby on Rails.
 
 <!-- > Describe between 1-3 key features of the application. -->
 
-- **[A travel list page]**
+- **[eat and split page]**
 <!-- - **[A login page]**
 - **[A Sign up page]**
 - **[A registration page]**
@@ -95,11 +95,12 @@ It is built using Ruby on Rails.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
+- [Live demo Link](https://eatssplit-sonick.netlify.app)
 
 ## 🚀 Live video <a name="live-video"></a>
 
 - [Live video Link](https://chimerical-tiramisu-7bd6e3.netlify.app/)
-<!-- - Comming soon -->
+- Comming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,7 +130,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:Sonickmumba/travel-list.git
+  git clone git@github.com:Sonickmumba/eat-and-split.git
 ```
 -
 
@@ -140,7 +141,7 @@ Install this project with:
 <!-- Example command: -->
 
 ```
-  cd travel-list
+  cd eat-and-split
   bundle install
 ```
 -
@@ -152,7 +153,7 @@ To run the project, execute the following command:
 <!-- Example command: -->
 
 ```sh
-  rails npm run dev
+  npm run dev
 ```
 -
 ### Run tests
@@ -172,7 +173,7 @@ You can deploy this project using:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://chimerical-tiramisu-7bd6e3.netlify.app/)
+- [Live Demo Link](https://eatssplit-sonick.netlify.app)
 <!-- - Comming soon -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
