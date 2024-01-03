@@ -88,7 +88,6 @@ It is built using React.
 - **[A Transactions page (with all CRUD implementation, except for 'update')]**
 - **[Add Transactions page]**
 - **[Add Category page]** -->
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -128,7 +127,6 @@ Example commands:
   cd my-folder
   git clone git@github.com:Sonickmumba/eat-and-split.git
 ```
--
 
 ### Install
 
@@ -140,7 +138,6 @@ Install this project with:
   cd eat-and-split
   bundle install
 ```
--
 
 ### Usage
 
