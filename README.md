@@ -95,9 +95,8 @@ It is built using React.
 - [Live demo Link](https://eatssplit-sonick.netlify.app)
 
 ## 🚀 Live video <a name="live-video"></a>
-
-- [Live video Link](https://chimerical-tiramisu-7bd6e3.netlify.app/)
-- Comming soon
+<!-- - [Live video Link](https://chimerical-tiramisu-7bd6e3.netlify.app/) -->
+- Coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,13 +110,13 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-> Ruby version : `ruby 3.1.2p20`
+<!-- > Ruby version : `ruby 3.1.2p20`
     run `ruby -v`
 > Database : **PostgreSQL**
 
 ```sh
  gem install rails
-```
+``` -->
 
 ### Setup
 
@@ -154,16 +153,16 @@ To run the project, execute the following command:
 ```
 -
 ### Run tests
-
+- Coming soon
 <!-- To run tests, run the following command: -->
-The app is tested using Rspec library you can check the tests by opening your terminal, then change the directory to the location of this repo using this command `cd file_path`, then run this command `gem install rspec`, finally run this command `rspec spec` or `rspec spec --format doc` for documented test results you should see a screen like that comming soon
+<!-- The app is tested using Rspec library you can check the tests by opening your terminal, then change the directory to the location of this repo using this command `cd file_path`, then run this command `gem install rspec`, finally run this command `rspec spec` or `rspec spec --format doc` for documented test results you should see a screen like that comming soon
 
 Example command:
 
 ```sh
   bin/rails test test/models/article_test.rb
-```
--
+``` -->
+<!-- - -->
 ### Deployment
 
 You can deploy this project using:
