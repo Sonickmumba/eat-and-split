@@ -20,8 +20,8 @@ const BillForm = ({
   }
 
   return (
-    <form className="form-split-bill" onSubmit={splitBill}>
-      <h2>Split a bill with {selectedFriend.name} </h2>
+    <form className="form-split-bill" onSubmit={splitBill} key={selectedFriend.id}>
+      <h2>Split a bill with {selectedFriend.name}</h2>
       <label>💰 Bill value</label>
       <input type="text" value={bill} onChange={totalBill} />
 
