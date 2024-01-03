@@ -31,7 +31,8 @@
 **Eat-and-split** is a web application where friends can split bill after a meal. The app shows how much one owes the other. Also more friends can be added to the eat and split bill app.
 It is built using React, Javascript, HTML, CSS3
 
-![screenshot](https://user-images.githubusercontent.com/106140591/183018381-7fc2062a-fd2b-4419-a30e-ea5ace4e8d78.png)
+![Travel list2 jpeg](https://github.com/Sonickmumba/eat-and-split/assets/106140591/3fa4162c-c001-4482-8ac0-5b3156e89bcb)
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
