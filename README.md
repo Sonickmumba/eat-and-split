@@ -28,11 +28,8 @@
 
 # 📖 Eat and split <a name="about-project"></a>
 
-**Eat-and-split** is a mobile web application where one can manage their budget: have a list of transactions associated with a category, so that one can see how much money you spent and on what.
-It is built using Ruby on Rails.
-
-# ERD Diagram
-<img width="374" alt="erd_diagram" src="https://user-images.githubusercontent.com/106140591/214742195-32de24a5-48be-4a7d-a906-cf274201523c.png">
+**Eat-and-split** is a web application where friends can split bill after a meal. The app shows how much one owes the other. Also more friends can be added to the eat and split bill app.
+It is built using React.
 
 ## 🛠 Built With <a name="built-with"></a>
 
