@@ -1,4 +1,3 @@
-# React + Vite
 
 <a name="readme-top"></a>
 
