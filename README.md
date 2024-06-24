@@ -222,7 +222,7 @@ If you like this project it a thumb up : 👍 and share this projects with your 
 
 I would like to thank...
 - [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for the design of the project.
-- **Microverse** for giving the opportunity t
+- **Microverse** for giving the opportunit
 - Code reviewers and coding partners
 - Hat tip to anyone whose code was used
 - Inspiration
